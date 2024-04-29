@@ -1,0 +1,25 @@
+// user-pill.component.ts
+
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-user-pill',
+  template: `
+    <span class="user-pill">{{ user.name }}</span>
+  `,
+  styles: [
+    `
+      .user-pill {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 4px 8px;
+        margin: 2px;
+        border-radius: 16px;
+      }
+    `
+  ]
+})
+export class UserPillComponent {
+  @Input() user: any;
+}
